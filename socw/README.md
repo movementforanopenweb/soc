@@ -25,128 +25,65 @@ in relation to implementation, enforcement strategy, and cross-border issues.*
 *Nothing in this FAQ limits or waives any rights or remedies available to the
 Website Operator under the Contract or applicable law.*
 
-*For the full terms, see the Contract.*
+*For the full terms, see the [Contract](2.txt).*
 
 **Table of Contents**
 
-[A. INTRODUCTORY QUESTIONS](#_Toc228376865)
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=3 orderedList=false} -->
 
-[B. Frequently Asked Questions](#_Toc228376866)
+<!-- code_chunk_output -->
 
-[1. CONTRACT TERMS](#_Toc228376867)
+- [INTRODUCTORY QUESTIONS](#introductory-questions)
+  - [What is this contract?](#what-is-this-contract)
+  - [Why does it exist?](#why-does-it-exist)
+  - [Who does it apply to?](#who-does-it-apply-to)
+  - [How does it work (step by step)?](#how-does-it-work-step-by-step)
+    - [Legal layer (the contract itself)](#legal-layer-the-contract-itself)
+    - [Technical layer (machine-readable signals)](#technical-layer-machine-readable-signals)
+    - [Alignment between the two](#alignment-between-the-two)
+  - [Works alongside other website policies](#works-alongside-other-website-policies)
+  - [How do I apply this to my Website?](#how-do-i-apply-this-to-my-website)
+- [Frequently Asked Questions](#frequently-asked-questions)
+  - [GENERAL](#general)
+    - [Why does the Movement for an Open Web (MOW) site not implement this](#why-does-the-movement-for-an-open-web-mow-site-not-implement-this)
+  - [CONTRACT TERMS](#contract-terms)
+    - [Is this contract binding if the accessing party never expressly agrees to the Contract?](#is-this-contract-binding-if-the-accessing-party-never-expressly-agrees-to-the-contract)
+    - [Does allowing search engine indexing weakens the restriction on AI use?](#does-allowing-search-engine-indexing-weakens-the-restriction-on-ai-use)
+    - [How does this interact with existing “free-to-index” norms?](#how-does-this-interact-with-existing-free-to-index-norms)
+    - [How is this Contract incorporated into other terms or systems?](#how-is-this-contract-incorporated-into-other-terms-or-systems)
+    - [What happens if this Contract conflicts with other terms?](#what-happens-if-this-contract-conflicts-with-other-terms)
+    - [Why do different terms sometimes apply to different consumers or services?](#why-do-different-terms-sometimes-apply-to-different-consumers-or-services)
+    - [Why is this Contract necessary alongside existing copyright law?](#why-is-this-contract-necessary-alongside-existing-copyright-law)
+  - [SCRAPING, CRAWLING & TECHNICAL CONTROL](#scraping-crawling--technical-control)
+    - [How do you prove that scraping or AI training has taken place?](#how-do-you-prove-that-scraping-or-ai-training-has-taken-place)
+    - [Does the “disallow everything” language in robots.txt risk unintentionally blocking search engine access?](#does-the-disallow-everything-language-in-robotstxt-risk-unintentionally-blocking-search-engine-access)
+    - [How should publishers practically evidence repeated infringement at scale?](#how-should-publishers-practically-evidence-repeated-infringement-at-scale)
+    - [How do we address AI companies relying on third-party scrapers?](#how-do-we-address-ai-companies-relying-on-third-party-scrapers)
+    - [What infrastructure is needed to monitor infringement?](#what-infrastructure-is-needed-to-monitor-infringement)
+    - [Can token-based or cryptographic systems realistically track content use?](#can-token-based-or-cryptographic-systems-realistically-track-content-use)
+    - [Does this Contract prevent accessibility tools or assistive technologies (e.g. screen readers)?](#does-this-contract-prevent-accessibility-tools-or-assistive-technologies-eg-screen-readers)
+    - [How should robots.txt and technical signals be interpreted?](#how-should-robotstxt-and-technical-signals-be-interpreted)
+    - [Do changes need to be made to HTML?](#do-changes-need-to-be-made-to-html)
+    - [Can websites covered by this Contract be used in Common Crawl?](#can-websites-covered-by-this-contract-be-used-in-common-crawl)
+    - [Can websites covered by this Contract be added to the Internet Archive?](#can-websites-covered-by-this-contract-be-added-to-the-internet-archive)
+  - [COMPENSATION & COMMERCIAL USE](#compensation--commercial-use)
+    - [How should pricing be approached given the variability in content value?](#how-should-pricing-be-approached-given-the-variability-in-content-value)
+    - [Would introducing payment expectations undermine free search visibility?](#would-introducing-payment-expectations-undermine-free-search-visibility)
+  - [ENFORCEMENT & LITIGATION](#enforcement--litigation)
+    - [What happens if a company simply ignores the Contract and operates outside the UK?](#what-happens-if-a-company-simply-ignores-the-contract-and-operates-outside-the-uk)
+    - [Is it viable to bring multiple small claims for repeated infringements?](#is-it-viable-to-bring-multiple-small-claims-for-repeated-infringements)
+    - [What is the most effective litigation pathway if cases escalate?](#what-is-the-most-effective-litigation-pathway-if-cases-escalate)
+    - [Should enforcement prioritise an early test case?](#should-enforcement-prioritise-an-early-test-case)
+    - [Would a collective enforcement model be more effective?](#would-a-collective-enforcement-model-be-more-effective)
+    - [Should enforcement go through regulators rather than courts?](#should-enforcement-go-through-regulators-rather-than-courts)
+  - [CONTRACT ECOSYSTEM AND ADOPTION](#contract-ecosystem-and-adoption)
+    - [Will adoption be standardised across publishers and jurisdictions?](#will-adoption-be-standardised-across-publishers-and-jurisdictions)
 
-[Q1) Is this contract binding if the accessing party never expressly agrees to
-the
-Contract?](#is-this-contract-binding-if-the-accessing-party-never-expressly-agrees-to-the-contract)
-
-[Q2) Isn’t this just trying to contract around copyright limits (e.g. fair
-dealing or fair
-use)?](#isnt-this-just-trying-to-contract-around-copyright-limits-eg-fair-dealing-or-fair-use)
-
-[Q3) Does allowing search engine indexing weakens the restriction on AI
-use?](#does-allowing-search-engine-indexing-weakens-the-restriction-on-ai-use)
-
-[Q4) How does this interact with existing “free-to-index”
-norms?](#how-does-this-interact-with-existing-free-to-index-norms)
-
-[Q5) How is this Contract incorporated into other terms or
-systems?](#how-is-this-contract-incorporated-into-other-terms-or-systems)
-
-[Q6) What happens if this Contract conflicts with other
-terms?](#what-happens-if-this-contract-conflicts-with-other-terms)
-
-[Q7) Why do different terms sometimes apply to different consumers or
-services?](#why-do-different-terms-sometimes-apply-to-different-consumers-or-services)
-
-[Q8) Why is this Contract necessary alongside existing copyright
-law?](#why-is-this-contract-necessary-alongside-existing-copyright-law)
-
-[2. SCRAPING, CRAWLING & TECHNICAL CONTROL](#_Toc228376876)
-
-[Q9) How do you prove that scraping or AI training has taken
-place?](#how-do-you-prove-that-scraping-or-ai-training-has-taken-place)
-
-[Q10) Does the “disallow everything” language in robots.txt risk unintentionally
-blocking search engine
-access?](#does-the-disallow-everything-language-in-robotstxt-risk-unintentionally-blocking-search-engine-access)
-
-[Q11) How should publishers practically evidence repeated infringement at
-scale?](#how-should-publishers-practically-evidence-repeated-infringement-at-scale)
-
-[Q12) How do we address AI companies relying on third-party
-scrapers?](#how-do-we-address-ai-companies-relying-on-third-party-scrapers)
-
-[Q13) What infrastructure is needed to monitor
-infringement?](#what-infrastructure-is-needed-to-monitor-infringement)
-
-[Q14) Can token-based or cryptographic systems realistically track content
-use?](#can-token-based-or-cryptographic-systems-realistically-track-content-use)
-
-[Q15) What role do data label Terms Document Locators (TDLs) and technical
-standards
-play?](#what-role-do-data-label-terms-document-locators-tdls-and-technical-standards-play)
-
-[Q16) Does this Contract prevent accessibility tools or assistive technologies
-(e.g. screen
-readers)?](#does-this-contract-prevent-accessibility-tools-or-assistive-technologies-eg-screen-readers)
-
-[Q17) Can websites covered by this Contract be used for academic and research
-purposes?](#can-websites-covered-by-this-contract-be-used-for-academic-and-research-purposes)
-
-[Q18) How should robots.txt and technical signals be
-interpreted?](#how-should-robotstxt-and-technical-signals-be-interpreted)
-
-[Q19) Can websites covered by this Contract be used in Common
-Crawl?](#can-websites-covered-by-this-contract-be-used-in-common-crawl)
-
-[Q20) Can websites covered by this Contract be added to the Internet
-Archive?](#can-websites-covered-by-this-contract-be-added-to-the-internet-archive)
-
-[3. COMPENSATION & COMMERCIAL USE](#_Toc228376889)
-
-[Q21) How should pricing be approached given the variability in content
-value?](#how-should-pricing-be-approached-given-the-variability-in-content-value)
-
-[Q22) Would introducing payment expectations undermine free search
-visibility?](#would-introducing-payment-expectations-undermine-free-search-visibility)
-
-[4. ENFORCEMENT & LITIGATION](#enforcement--litigation)
-
-[Q23) What happens if a company simply ignores the Contract and operates outside
-the
-UK?](#what-happens-if-a-company-simply-ignores-the-contract-and-operates-outside-the-uk)
-
-[Q24) Is it viable to bring multiple small claims for repeated
-infringements?](#is-it-viable-to-bring-multiple-small-claims-for-repeated-infringements)
-
-[Q25) What is the most effective litigation pathway if cases
-escalate?](#what-is-the-most-effective-litigation-pathway-if-cases-escalate)
-
-[Q26) Should enforcement prioritise an early test
-case?](#should-enforcement-prioritise-an-early-test-case)
-
-[Q27) Would a collective enforcement model be more
-effective?](#would-a-collective-enforcement-model-be-more-effective)
-
-[Q28) Should enforcement go through regulators rather than
-courts?](#should-enforcement-go-through-regulators-rather-than-courts)
-
-[Q29) Is there a risk of retaliation from search engines or
-platforms?](#is-there-a-risk-of-retaliation-from-search-engines-or-platforms)
-
-[5. CONTRACT ECOSYSTEM AND ADOPTION](#_Toc228376900)
-
-[Q30) What is the role of a central coordinating body (e.g. Movement for an Open
-Web)?](#what-is-the-role-of-a-central-coordinating-body-eg-movement-for-an-open-web)
-
-[Q31) Will adoption be standardised across publishers and
-jurisdictions?](#will-adoption-be-standardised-across-publishers-and-jurisdictions)
-
-## 
+<!-- /code_chunk_output -->
 
 # INTRODUCTORY QUESTIONS
 
-**What is this contract?**
+## What is this contract?
 
 This contract governs how your website content may be accessed and used.
 
@@ -162,28 +99,28 @@ engine crawling and indexing, and sets clear limits on how that content may be
 reused.
 
 In particular, it permits search indexing only, while restricting scraping, bulk
-extraction, dataset creation, and any AI‑related use unless expressly
+extraction, dataset creation, and any AI-related use unless expressly
 authorised.
 
 It operates alongside any general website terms (such as terms of use or cookie
 policies), but is focused specifically on content access, indexing, and
-downstream reuse, including automated and AI‑driven activity.
+downstream reuse, including automated and AI-driven activity.
 
-**Why does it exist?**
+## Why does it exist?
 
 This contract exists to draw a clear boundary between what is permitted and what
 requires permission.
 
 It allows standard search engine indexing so the website can be discovered,
 while making clear that activities such as AI training, dataset creation, bulk
-scraping, or other data‑driven reuse are not included in that permission.
+scraping, or other datadriven reuse are not included in that permission.
 
 Historically, these uses have often been treated as overlapping or implicit.
 This contract removes that ambiguity by expressly separating ordinary search
-indexing from AI and data‑extraction activities and treating the latter as
+indexing from AI and data-extraction activities and treating the latter as
 controlled uses that require explicit authorisation.
 
-**Who does it apply to?**
+## Who does it apply to?
 
 This contract applies to any person, entity, or system that accesses or
 interacts with the website or its content, regardless of the method or
@@ -199,13 +136,13 @@ It covers access by:
 
 - automated crawlers and bots, and
 
-- Artificial Intelligence Systems or machine‑driven agents.
+- Artificial Intelligence Systems or machine-driven agents.
 
 It applies equally whether access is:
 
 - manual, such as a person visiting pages through a browser, or
 
-- automated, such as bots, scrapers, crawlers, indexing tools, or AI‑driven
+- automated, such as bots, scrapers, crawlers, indexing tools, or AI-driven
   systems.
 
 The intention is that there are no gaps or grey areas. If a person, company,
@@ -213,35 +150,38 @@ program, or system in any way accesses, retrieves, processes, or interacts with
 the website or its content, that access falls within the scope of this contract
 and is governed by its terms.
 
-**How does it work (step by step)?**
+## How does it work (step by step)?
 
 Think of it as working in layers — both legal and technical — at the same time:
 
-1. **Legal layer (the contract itself)**  
-   The Contract is made visible on the website, for example through integration
-   via a link into website terms of service (sometimes called Terms and
-   Conditions, or Website Terms etc.) or as an additional legal footer link or
-   an on‑page notice.
+### Legal layer (the contract itself)
 
-   Please see “How do I apply this Contract” question below for how to apply the
-   Contract on your Website.
+The Contract is made visible on the website, for example through integration
+via a link into website terms of service (sometimes called Terms and
+Conditions, or Website Terms etc.) or as an additional legal footer link or
+an on-page notice.
 
-   The Contract clearly states that anyone who accesses or uses the website is
-   subject to its rules.
+Please see “How do I apply this Contract” question below for how to apply the
+Contract on your Website.
 
-   Acceptance does not require a tick box or signature. Instead, agreement is
-   formed through conduct, simply by accessing, viewing, crawling, indexing, or
-   otherwise interacting with the website or its content.
+The Contract clearly states that anyone who accesses or uses the website is
+subject to its rules.
 
-   This ensures that:
+Acceptance does not require a tick box or signature. Instead, agreement is
+formed through conduct, simply by accessing, viewing, crawling, indexing, or
+otherwise interacting with the website or its content.
+
+This ensures that:
 
 - the terms apply automatically, and
 
 - no user or system can argue that they were unaware of the terms.
 
-  **Technical layer (machine-readable signals)**Alongside the legal contract,
-  the website uses technical, machine‑readable links to the Contract to
-  communicate permissions and restrictions to automated systems.
+### Technical layer (machine-readable signals)
+
+Alongside the legal contract,
+the website uses technical, machine-readable links to the Contract to communicate
+permissions and restrictions to automated systems.
 
 These may include:
 
@@ -249,37 +189,39 @@ These may include:
 
 - HTTP headers, and
 
-- other standard machine‑readable signals.
+- other standard machine-readable signals.
 
-  These signals tell automated systems — such as crawlers, bots, and AI systems
-  — the location of the Contract which defines what they are allowed to do and
-  what they are not allowed to do when accessing the website. As many websites
-  use the same location for the Contract it is machine-readable and can be
-  readily identified across many websites.
+These signals tell automated systems — such as crawlers, bots, and AI systems —
+the location of the Contract which defines what they are allowed to do and what
+they are not allowed to do when accessing the website. As many websites use the
+same location for the Contract it is machine-readable and can be readily
+identified across many websites.
 
-  **Alignment between the two**  
-  The legal terms and the technical instructions are intentionally designed to
-  say the same thing.
+### Alignment between the two
 
-  For example:
+The legal terms and the technical instructions are intentionally designed to say
+the same thing.
+
+For example:
 
 - search engines are permitted to crawl content strictly for search indexing and
   discovery;
 
-- AI systems and data‑harvesting tools are not permitted to ingest content for
-  training, datasets, or other AI‑related uses without gaining explicit
+- AI systems and dataharvesting tools are not permitted to ingest content for
+  training, datasets, or other AI-related uses without gaining explicit
   additional permission.
 
-  Because the legal rules and technical signals are aligned, there is no
-  ambiguity about permitted use. This significantly strengthens enforcement, as
-  a user or system has been put on notice in more than one way.
+Because the legal rules and technical signals are aligned, there is no ambiguity
+about permitted use. This significantly strengthens enforcement, as a user or
+system has been put on notice in more than one way.
 
-  **Works alongside other website policies**  
-  This Contract does not replace any existing website policies. Instead, it
-  operates alongside them, each addressing a different aspect of how the website
-  is run and used.
+## Works alongside other website policies
 
-  In the same way as:
+This Contract does not replace any existing website policies. Instead, it
+operates alongside them, each addressing a different aspect of how the website
+is run and used.
+
+In the same way as:
 
 - cookie policies explain how cookies and tracking technologies are used,
 
@@ -287,40 +229,41 @@ These may include:
 
 - general terms of use set out the overall rules for using the site,
 
-  this contract focuses specifically on how website content may be accessed,
-  indexed, and reused, particularly by automated systems and AI‑driven
-  technologies.
+this contract focuses specifically on how website content may be accessed,
+indexed, and reused, particularly by automated systems and AI-driven
+technologies.
 
-How do I apply this to my Website?
+## How do I apply this to my Website?
 
-**How to implement the** Search Only Terms Contract: for Access and Use of
-Website (the “**Contract**”) **(Publisher instructions)**
+How to implement the Search Only Terms Contract: for Access and Use of
+Website (the “**Contract**”) (Publisher instructions)
 
 Please follow the steps below to correctly implement the Contract on your
 website.
 
-**1. Use the official MOW URL (no self-hosting required)**
+**1. Use the official Movement for an Open Web (MOW) URL (no self-hosting
+required)**
 
 You must not create or host your own version of the Contract as the Contract is
 hosted and managed exclusively by MOW.
 
 Each version of the Contract is assigned a unique, fixed URL
-(<https://m4ow.uk/socw/1.txt>), which is stewarded by MOW.
+(<https://m4ow.uk/socw/2.txt>), which is stewarded by MOW.
 
 Once published the content at a given URL must never be changed. If any
 amendment is required, a new version will be created and assigned a new URL
-(e.g. /2txt, /3txt, etc.). Updates versions will be published on the MOW website
-(https://movementforanopenweb.com/).
+(e.g. /2.txt, /3.txt, etc.). Updates versions will be published on the MOW
+website (<https://movementforanopenweb.com/>).
 
 **2. Update robots.txt file**
 
 Next, add the following lines to the website’s robots.txt file (this file is
 usually located at: yourdomain.com/robots.txt):
 
-```
-# License https://m4ow.uk/socw/1.txt
+```plain
+# License https://m4ow.uk/socw/2.txt
 User-agent: *
-tdl: https://m4ow.uk/socw/1.txt
+tdl: https://m4ow.uk/socw/2.txt
 Allow: /
 ```
 
@@ -342,7 +285,7 @@ incorporate the contract terms.
 **Insert the following text in the relevant place in your website terms and
 conditions**
 
-[*Clause \#1 – insert relevant clause number in line with your website terms and
+[*Clause 1 – insert relevant clause number in line with your website terms and
 conditions*] These [*terms of service\* use the name of the legal terms you
 offer on our website*] refers and incorporates the following additional terms,
 which also apply to your use of our [*site- use the same term you use on your
@@ -350,8 +293,8 @@ terms for your website*]:
 
 [Clause 1.1] Our Search Only Terms Contract: for Access and Use of Website
 (available at the version-controlled URL published by MOW, currently being the
-following link: https://m4ow.uk/socw/1.txt) governs crawling, indexing and other
-automated or programmatic access to the Website and its content.
+following link: <https://m4ow.uk/socw/2.txt>) governs crawling, indexing and
+other automated or programmatic access to the Website and its content.
 
 [Clause 1.2] If there is an inconsistency between any of the provisions of these
 [Terms and Conditions] and the provisions of [Search Only Terms Contract: for
@@ -363,7 +306,7 @@ referenced MOW URL shall prevail.
 
 *(Insert only if you wish to apply a different contractual sum for small claims
 for breach of contract per [Clause 14]* Binding Search Only Contract for Access
-and Use of Website*)*
+and Use of Website)
 
 **Optional insert – Clause 14 (Cost of Breach) Override**
 
@@ -385,23 +328,26 @@ you should archive your robots.txt file after updating it.
 
 A simple way to do this is using the Internet Archive (Wayback Machine):
 
-- Go to: <https://web.archive.org>
+- Go to: [https://web.archive.org](https://web.archive.org/)
 
-- Enter: https://yourdomain.com/robots.txt into the "Save Page Now’ text box and
-  press the Save Page button
+- Enter: <https://yourdomain.com/robots.txt> into the "Save Page Now’ text box
+  and press the Save Page button
 
 - Save a snapshot
 
 This provides timestamped proof that the instruction existed at that date.
 
-5\. Why does the Movement for an Open Web (MOW) site not implement this Contract?
+# Frequently Asked Questions
+
+## GENERAL
+
+### Why does the Movement for an Open Web (MOW) site not implement this
+Contract?
 
 **Answer**: MOW is a not-for-profit that needs to make content available for AI
 training, so AI responses are informed by alternative positions and arguments
 from those presented by AI vendors and Big Tech. As such the Contract is not
 compatible with the purpose of the MOW website.
-
-# Frequently Asked Questions
 
 ## CONTRACT TERMS
 
@@ -431,7 +377,8 @@ critical.*
 *Avoid softening this to “we ask users to comply” or “this sets expectations” —
 that risks undermining the contractual footing.*
 
-### Isn’t this just trying to contract around copyright limits (e.g. fair dealing or fair use)?
+**Isn’t this just trying to contract around copyright limits (e.g. fair dealing
+or fair use)?**
 
 **Answer:** The Contract doesn’t replace copyright law. Instead, it sets
 conditions for using the website that sit alongside the regulatory copyright
@@ -696,7 +643,8 @@ support enforcement where problems arise.
 
 *Keep wording that says these tools support evidence, not replace legal rights.*
 
-### What role do data label Terms Document Locators (TDLs) and technical standards play?
+**What role do data label Terms Document Locators (TDLs) and technical standards
+play?**
 
 **Answer:** The Data Labels standards reduce ambiguity for machines. They
 provide a foundation for machine-readable permissions and traceability via
@@ -709,13 +657,13 @@ these signals are recognised and respected across platforms.
 
 *LEGAL NOTE*
 
-*Keep “machinereadable legal restrictions” language — it connects technical
+*Keep “machine-readable legal restrictions” language — it connects technical
 signals to legal intent.*
 
 ### Does this Contract prevent accessibility tools or assistive technologies (e.g. screen readers)?
 
 **Answer:** No. The Contract does not restrict accessibility or assistive
-technologies. Tools such as screen readers, text‑to‑speech systems, and other
+technologies. Tools such as screen readers, texttospeech systems, and other
 accessibility agents used to help people with disabilities access the website
 are permitted. The Contract targets bulk reuse and secondary exploitation of
 content, not user-facing non-commercial access (section 4.1.1).
@@ -731,7 +679,8 @@ permitted. Avoid broad bans on “automated access” without carveouts that ris
 unintended consequences. Framing accessibility tools as user-facing access
 mechanisms, not secondary reuse systems, is important.*
 
-### Can websites covered by this Contract be used for academic and research purposes?
+**Can websites covered by this Contract be used for academic and research
+purposes?**
 
 **Answer:** Limited non-commercial access (including reading and research) is
 permitted. However, activities such as scraping, dataset creation, or AI
@@ -766,6 +715,47 @@ interpreted consistently as part of a single access control framework.
 advisory”. You frame it as part of a unified legal-technical system, not
 separate layers in conflict.*
 
+### Do changes need to be made to HTML?
+
+**Answer:**
+
+No. There is no requirement to modify your website’s HTML in order to implement
+the Contract.
+
+The primary method of implementation remains through machine-readable signals
+such as the robots.txt file, which identifies the applicable Terms Document
+Locator (TDL).
+
+However, publishers may choose to additionally include references to the
+Contract within the HTML of their webpages. For example, where multiple licences
+are used at the following URLs:
+
+```plain
+https://m4ow.uk/socw/2.txt
+https://example.com/other/tos.txt
+```
+
+These can also be included in the HTML \<head\> element via the terms-of-service
+link relation, as shown below:
+
+```xml
+<head>
+<link rel="terms-of-service" href="https://m4ow.uk/socw/2.txt"/>
+<link rel="terms-of-service" href="https://example.com/other/tos.txt"/>
+</head>
+```
+
+This approach is optional and does not replace the need to correctly implement
+the robots.txt configuration, but may provide an additional layer of visibility
+and consistency across systems.
+
+*LEGAL NOTE*
+
+*Keep the distinction clear: HTML inclusion is supplementary, not required.*
+
+*Avoid implying that HTML implementation alone is sufficient — robots.txt and
+machine-readable signals remain primary.*
+
 ### Can websites covered by this Contract be used in Common Crawl?
 
 **Answer:**
@@ -799,8 +789,9 @@ described in Section 10.
 There is no standard price or marketplace for valuing content. This contract
 does not seek to apply a market value, the Contract simply makes clear that use
 beyond search indexing is not free by default. The Contract also establishes an
-Access Fee of £500 per Access Event as defined being for a 24-hour period, which
-applies where access falls outside the permitted licensed scope.
+Access Fee of £500 per Access Event as defined as any instance of Access to a
+Product on the Website (e.g. an article, video image or photographic work,
+etc.), which applies where access falls outside the permitted licensed scope.
 
 *LEGAL NOTE*
 
@@ -917,7 +908,7 @@ litigation remains an important and immediate enforcement mechanism.
 
 *Retain litigation as an immediate option.*
 
-### Is there a risk of retaliation from search engines or platforms?
+**Is there a risk of retaliation from search engines or platforms?**
 
 **Answer:**
 
@@ -928,7 +919,8 @@ similar policies, reduces the incentive to retaliate.
 
 ## CONTRACT ECOSYSTEM AND ADOPTION
 
-### What is the role of a central coordinating body (e.g. Movement for an Open Web)?
+**What is the role of a central coordinating body (e.g. Movement for an Open
+Web)?**
 
 **Answer:**
 
