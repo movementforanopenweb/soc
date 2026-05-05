@@ -45,7 +45,7 @@ Website Operator under the Contract or applicable law.*
   - [How do I apply this to my Website?](#how-do-i-apply-this-to-my-website)
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [GENERAL](#general)
-    - [Why does the Movement for an Open Web (MOW) site not implement this](#why-does-the-movement-for-an-open-web-mow-site-not-implement-this)
+    - [Why does the Movement for an Open Web (MOW) site not implement this Contract?](#why-does-the-movement-for-an-open-web-mow-site-not-implement-this-contract)
   - [CONTRACT TERMS](#contract-terms)
     - [Is this contract binding if the accessing party never expressly agrees to the Contract?](#is-this-contract-binding-if-the-accessing-party-never-expressly-agrees-to-the-contract)
     - [Does allowing search engine indexing weakens the restriction on AI use?](#does-allowing-search-engine-indexing-weakens-the-restriction-on-ai-use)
@@ -61,6 +61,7 @@ Website Operator under the Contract or applicable law.*
     - [How do we address AI companies relying on third-party scrapers?](#how-do-we-address-ai-companies-relying-on-third-party-scrapers)
     - [What infrastructure is needed to monitor infringement?](#what-infrastructure-is-needed-to-monitor-infringement)
     - [Can token-based or cryptographic systems realistically track content use?](#can-token-based-or-cryptographic-systems-realistically-track-content-use)
+    - [What role do data label Terms Document Locators (TDLs) and technical standards play?](#what-role-do-data-label-terms-document-locators-tdls-and-technical-standards-play)
     - [Does this Contract prevent accessibility tools or assistive technologies (e.g. screen readers)?](#does-this-contract-prevent-accessibility-tools-or-assistive-technologies-eg-screen-readers)
     - [How should robots.txt and technical signals be interpreted?](#how-should-robotstxt-and-technical-signals-be-interpreted)
     - [Do changes need to be made to HTML?](#do-changes-need-to-be-made-to-html)
@@ -76,7 +77,9 @@ Website Operator under the Contract or applicable law.*
     - [Should enforcement prioritise an early test case?](#should-enforcement-prioritise-an-early-test-case)
     - [Would a collective enforcement model be more effective?](#would-a-collective-enforcement-model-be-more-effective)
     - [Should enforcement go through regulators rather than courts?](#should-enforcement-go-through-regulators-rather-than-courts)
+    - [Is there a risk of retaliation from search engines or platforms?](#is-there-a-risk-of-retaliation-from-search-engines-or-platforms)
   - [CONTRACT ECOSYSTEM AND ADOPTION](#contract-ecosystem-and-adoption)
+    - [What is the role of a central coordinating body (e.g. Movement for an Open Web)?](#what-is-the-role-of-a-central-coordinating-body-eg-movement-for-an-open-web)
     - [Will adoption be standardised across publishers and jurisdictions?](#will-adoption-be-standardised-across-publishers-and-jurisdictions)
 
 <!-- /code_chunk_output -->
@@ -341,8 +344,7 @@ This provides timestamped proof that the instruction existed at that date.
 
 ## GENERAL
 
-### Why does the Movement for an Open Web (MOW) site not implement this
-Contract?
+### Why does the Movement for an Open Web (MOW) site not implement this Contract?
 
 **Answer**: MOW is a not-for-profit that needs to make content available for AI
 training, so AI responses are informed by alternative positions and arguments
@@ -643,8 +645,7 @@ support enforcement where problems arise.
 
 *Keep wording that says these tools support evidence, not replace legal rights.*
 
-**What role do data label Terms Document Locators (TDLs) and technical standards
-play?**
+### What role do data label Terms Document Locators (TDLs) and technical standards play?
 
 **Answer:** The Data Labels standards reduce ambiguity for machines. They
 provide a foundation for machine-readable permissions and traceability via
@@ -908,7 +909,7 @@ litigation remains an important and immediate enforcement mechanism.
 
 *Retain litigation as an immediate option.*
 
-**Is there a risk of retaliation from search engines or platforms?**
+### Is there a risk of retaliation from search engines or platforms?
 
 **Answer:**
 
@@ -919,8 +920,7 @@ similar policies, reduces the incentive to retaliate.
 
 ## CONTRACT ECOSYSTEM AND ADOPTION
 
-**What is the role of a central coordinating body (e.g. Movement for an Open
-Web)?**
+### What is the role of a central coordinating body (e.g. Movement for an Open Web)?
 
 **Answer:**
 
